@@ -78,12 +78,19 @@ int main( int argc, char* argv[] )
 
 
 			//place your code here /***************************************/
-		if(distanceFormula(red_x, red_y, blue_x, blue_y) <= 1.5) {
-			lvel = 0.2;
-			rvel = bearingFormula(red_x, red_y, blue_x, blue_y) * 75;
+		//if blue closes in on red within 2.0, then slow down
+		if(distanceFormula(red_x, red_y, blue_x, blue_y) <= 2.0) {
+			lvel = 0.1;
 		} else {
 			lvel = des_vel;
-		}	
+		}
+			// If angles are not equal, then change blue_theta until it is equal to red_theta
+		if(red_theta > blue_theta || red_theta < blue_theta) {
+			rvel = -0.25;
+		} else {
+			rvel = 0;
+		}
+			
 		/***************************************/
 
 		// send the speeds to the robot
@@ -96,3 +103,4 @@ int main( int argc, char* argv[] )
 
 	return 0;
 }
+
