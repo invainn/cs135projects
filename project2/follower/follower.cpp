@@ -88,8 +88,6 @@ int main( int argc, char* argv[] )
 			rvel = 0.75;
 		} else if(temp < 0) {
 			rvel = -0.75;
-		} else {
-			rvel = 0;
 		}
 
 		if(temp == 0) {
