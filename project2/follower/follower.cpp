@@ -4,8 +4,6 @@
 
 #include <tf/transform_datatypes.h>
 
-#include <math.h>
-
 
 /************************************/
   // place your functions here
@@ -13,10 +11,8 @@ double distanceFormula(double x1, double y1, double x2, double y2) {
 	double d = sqrt((pow(x2-x1,2))+(pow(y2-y1,2)));
 	return d; 
 }
-
-double bearingFormula(double x1, double y1, double x2, double y2) {
-	double thetaT = atan((y2-y1)/(x2-x1));
-	thetaT = thetaT * (M_PI/180);
+double bearing(double x1, double y1, double x2, double y2) {
+	double thetaT = atan2((y2-y1),(x2-x1));
 	return thetaT;		
 }
 
@@ -79,20 +75,31 @@ int main( int argc, char* argv[] )
 
 			//place your code here /***************************************/
 		//if blue closes in on red within 2.0, then slow down
-		if(distanceFormula(red_x, red_y, blue_x, blue_y) <= 2.0) {
-			lvel = 0.1;
+		double temp = bearing(blue_x, blue_y, red_x, red_y) - blue_theta;
+		
+		if(distanceFormula(blue_x, blue_y, red_x, red_y) < 2.5) {
+			lvel = 0.5;
 		} else {
 			lvel = des_vel;
 		}
-			// If angles are not equal, then change blue_theta until it is equal to red_theta
-		if(red_theta > blue_theta || red_theta < blue_theta) {
-			rvel = -0.25;
+			
+		// if temp  
+		if(temp > 0) {
+			rvel = 0.75;
+		} else if(temp < 0) {
+			rvel = -0.75;
 		} else {
 			rvel = 0;
 		}
-			
-		/***************************************/
 
+		if(temp == 0) {
+			rvel = 0;
+		}
+
+
+
+		
+			/***************************************/
 		// send the speeds to the robot
 		cmd_vel_msg.linear.x = lvel;
 		cmd_vel_msg.angular.z = rvel;

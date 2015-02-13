@@ -34,14 +34,11 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /nfs/home/anthonybennett/cs135projects/project2/wanderer
+CMAKE_SOURCE_DIR = /home/anthonybennett/cs135projects/project2/wanderer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /nfs/home/anthonybennett/cs135projects/project2/wanderer/build
+CMAKE_BINARY_DIR = /home/anthonybennett/cs135projects/project2/wanderer/build
 
 # Utility rule file for clean_test_results.
 
@@ -49,7 +46,7 @@ CMAKE_BINARY_DIR = /nfs/home/anthonybennett/cs135projects/project2/wanderer/buil
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/cmake -E remove_directory /nfs/home/anthonybennett/cs135projects/project2/wanderer/build/test_results
+	/usr/bin/cmake -E remove_directory /home/anthonybennett/cs135projects/project2/wanderer/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -64,6 +61,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /nfs/home/anthonybennett/cs135projects/project2/wanderer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /nfs/home/anthonybennett/cs135projects/project2/wanderer /nfs/home/anthonybennett/cs135projects/project2/wanderer /nfs/home/anthonybennett/cs135projects/project2/wanderer/build /nfs/home/anthonybennett/cs135projects/project2/wanderer/build /nfs/home/anthonybennett/cs135projects/project2/wanderer/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/anthonybennett/cs135projects/project2/wanderer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anthonybennett/cs135projects/project2/wanderer /home/anthonybennett/cs135projects/project2/wanderer /home/anthonybennett/cs135projects/project2/wanderer/build /home/anthonybennett/cs135projects/project2/wanderer/build /home/anthonybennett/cs135projects/project2/wanderer/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

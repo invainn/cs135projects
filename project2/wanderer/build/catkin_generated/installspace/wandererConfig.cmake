@@ -67,8 +67,8 @@ set(wanderer_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(wanderer_SOURCE_PREFIX /nfs/home/anthonybennett/cs135projects/project2/wanderer)
-  set(wanderer_DEVEL_PREFIX /nfs/home/anthonybennett/cs135projects/project2/wanderer/build/devel)
+  set(wanderer_SOURCE_PREFIX /home/anthonybennett/cs135projects/project2/wanderer)
+  set(wanderer_DEVEL_PREFIX /home/anthonybennett/cs135projects/project2/wanderer/build/devel)
   set(wanderer_INSTALL_PREFIX "")
   set(wanderer_PREFIX ${wanderer_DEVEL_PREFIX})
 else()

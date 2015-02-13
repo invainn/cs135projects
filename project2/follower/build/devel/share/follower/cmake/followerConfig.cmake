@@ -67,8 +67,8 @@ set(follower_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(follower_SOURCE_PREFIX /nfs/home/anthonybennett/cs135projects/project2/follower)
-  set(follower_DEVEL_PREFIX /nfs/home/anthonybennett/cs135projects/project2/follower/build/devel)
+  set(follower_SOURCE_PREFIX /home/anthonybennett/cs135projects/project2/follower)
+  set(follower_DEVEL_PREFIX /home/anthonybennett/cs135projects/project2/follower/build/devel)
   set(follower_INSTALL_PREFIX "")
   set(follower_PREFIX ${follower_DEVEL_PREFIX})
 else()
@@ -103,7 +103,7 @@ if(NOT "" STREQUAL "")
         message(FATAL_ERROR "Project 'follower' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  Ask the maintainer 'Dave Feil-Seifer <dave@cse.unr.edu>' to fix it.")
       endif()
     else()
-      message(FATAL_ERROR "Project 'follower' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/nfs/home/anthonybennett/cs135projects/project2/follower/${idir}'.  Ask the maintainer 'Dave Feil-Seifer <dave@cse.unr.edu>' to fix it.")
+      message(FATAL_ERROR "Project 'follower' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/anthonybennett/cs135projects/project2/follower/${idir}'.  Ask the maintainer 'Dave Feil-Seifer <dave@cse.unr.edu>' to fix it.")
     endif()
     _list_append_unique(follower_INCLUDE_DIRS ${include})
   endforeach()
@@ -122,7 +122,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /nfs/home/anthonybennett/cs135projects/project2/follower/build/devel/lib;/opt/ros/indigo/lib)
+    foreach(path /home/anthonybennett/cs135projects/project2/follower/build/devel/lib;/opt/ros/indigo/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

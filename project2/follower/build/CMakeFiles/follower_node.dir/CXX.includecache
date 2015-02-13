@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/nfs/home/anthonybennett/cs135projects/project2/follower/follower.cpp
+/home/anthonybennett/cs135projects/project2/follower/follower.cpp
 ros/ros.h
 -
 nav_msgs/Odometry.h
@@ -14,8 +14,6 @@ nav_msgs/Odometry.h
 geometry_msgs/Twist.h
 -
 tf/transform_datatypes.h
--
-math.h
 -
 
 /opt/ros/indigo/include/XmlRpcDecl.h

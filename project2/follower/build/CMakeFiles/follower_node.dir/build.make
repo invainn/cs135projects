@@ -34,14 +34,11 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /nfs/home/anthonybennett/cs135projects/project2/follower
+CMAKE_SOURCE_DIR = /home/anthonybennett/cs135projects/project2/follower
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /nfs/home/anthonybennett/cs135projects/project2/follower/build
+CMAKE_BINARY_DIR = /home/anthonybennett/cs135projects/project2/follower/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/follower_node.dir/depend.make
@@ -54,17 +51,17 @@ include CMakeFiles/follower_node.dir/flags.make
 
 CMakeFiles/follower_node.dir/follower.cpp.o: CMakeFiles/follower_node.dir/flags.make
 CMakeFiles/follower_node.dir/follower.cpp.o: ../follower.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /nfs/home/anthonybennett/cs135projects/project2/follower/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/anthonybennett/cs135projects/project2/follower/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/follower_node.dir/follower.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/follower_node.dir/follower.cpp.o -c /nfs/home/anthonybennett/cs135projects/project2/follower/follower.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/follower_node.dir/follower.cpp.o -c /home/anthonybennett/cs135projects/project2/follower/follower.cpp
 
 CMakeFiles/follower_node.dir/follower.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/follower_node.dir/follower.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /nfs/home/anthonybennett/cs135projects/project2/follower/follower.cpp > CMakeFiles/follower_node.dir/follower.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/anthonybennett/cs135projects/project2/follower/follower.cpp > CMakeFiles/follower_node.dir/follower.cpp.i
 
 CMakeFiles/follower_node.dir/follower.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/follower_node.dir/follower.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /nfs/home/anthonybennett/cs135projects/project2/follower/follower.cpp -o CMakeFiles/follower_node.dir/follower.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/anthonybennett/cs135projects/project2/follower/follower.cpp -o CMakeFiles/follower_node.dir/follower.cpp.s
 
 CMakeFiles/follower_node.dir/follower.cpp.o.requires:
 .PHONY : CMakeFiles/follower_node.dir/follower.cpp.o.requires
@@ -117,6 +114,6 @@ CMakeFiles/follower_node.dir/clean:
 .PHONY : CMakeFiles/follower_node.dir/clean
 
 CMakeFiles/follower_node.dir/depend:
-	cd /nfs/home/anthonybennett/cs135projects/project2/follower/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /nfs/home/anthonybennett/cs135projects/project2/follower /nfs/home/anthonybennett/cs135projects/project2/follower /nfs/home/anthonybennett/cs135projects/project2/follower/build /nfs/home/anthonybennett/cs135projects/project2/follower/build /nfs/home/anthonybennett/cs135projects/project2/follower/build/CMakeFiles/follower_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/anthonybennett/cs135projects/project2/follower/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anthonybennett/cs135projects/project2/follower /home/anthonybennett/cs135projects/project2/follower /home/anthonybennett/cs135projects/project2/follower/build /home/anthonybennett/cs135projects/project2/follower/build /home/anthonybennett/cs135projects/project2/follower/build/CMakeFiles/follower_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/follower_node.dir/depend
 

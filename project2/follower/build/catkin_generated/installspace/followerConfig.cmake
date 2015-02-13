@@ -67,8 +67,8 @@ set(follower_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(follower_SOURCE_PREFIX /nfs/home/anthonybennett/cs135projects/project2/follower)
-  set(follower_DEVEL_PREFIX /nfs/home/anthonybennett/cs135projects/project2/follower/build/devel)
+  set(follower_SOURCE_PREFIX /home/anthonybennett/cs135projects/project2/follower)
+  set(follower_DEVEL_PREFIX /home/anthonybennett/cs135projects/project2/follower/build/devel)
   set(follower_INSTALL_PREFIX "")
   set(follower_PREFIX ${follower_DEVEL_PREFIX})
 else()

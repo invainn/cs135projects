@@ -34,14 +34,11 @@ RM = /usr/bin/cmake -E remove -f
 # Escaping for special characters.
 EQUALS = =
 
-# The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/bin/ccmake
-
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /nfs/home/anthonybennett/cs135projects/project2/wanderer
+CMAKE_SOURCE_DIR = /home/anthonybennett/cs135projects/project2/wanderer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /nfs/home/anthonybennett/cs135projects/project2/wanderer/build
+CMAKE_BINARY_DIR = /home/anthonybennett/cs135projects/project2/wanderer/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/wanderer_node.dir/depend.make
@@ -54,17 +51,17 @@ include CMakeFiles/wanderer_node.dir/flags.make
 
 CMakeFiles/wanderer_node.dir/wanderer.cpp.o: CMakeFiles/wanderer_node.dir/flags.make
 CMakeFiles/wanderer_node.dir/wanderer.cpp.o: ../wanderer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /nfs/home/anthonybennett/cs135projects/project2/wanderer/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/anthonybennett/cs135projects/project2/wanderer/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/wanderer_node.dir/wanderer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/wanderer_node.dir/wanderer.cpp.o -c /nfs/home/anthonybennett/cs135projects/project2/wanderer/wanderer.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/wanderer_node.dir/wanderer.cpp.o -c /home/anthonybennett/cs135projects/project2/wanderer/wanderer.cpp
 
 CMakeFiles/wanderer_node.dir/wanderer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wanderer_node.dir/wanderer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /nfs/home/anthonybennett/cs135projects/project2/wanderer/wanderer.cpp > CMakeFiles/wanderer_node.dir/wanderer.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/anthonybennett/cs135projects/project2/wanderer/wanderer.cpp > CMakeFiles/wanderer_node.dir/wanderer.cpp.i
 
 CMakeFiles/wanderer_node.dir/wanderer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wanderer_node.dir/wanderer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /nfs/home/anthonybennett/cs135projects/project2/wanderer/wanderer.cpp -o CMakeFiles/wanderer_node.dir/wanderer.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/anthonybennett/cs135projects/project2/wanderer/wanderer.cpp -o CMakeFiles/wanderer_node.dir/wanderer.cpp.s
 
 CMakeFiles/wanderer_node.dir/wanderer.cpp.o.requires:
 .PHONY : CMakeFiles/wanderer_node.dir/wanderer.cpp.o.requires
@@ -117,6 +114,6 @@ CMakeFiles/wanderer_node.dir/clean:
 .PHONY : CMakeFiles/wanderer_node.dir/clean
 
 CMakeFiles/wanderer_node.dir/depend:
-	cd /nfs/home/anthonybennett/cs135projects/project2/wanderer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /nfs/home/anthonybennett/cs135projects/project2/wanderer /nfs/home/anthonybennett/cs135projects/project2/wanderer /nfs/home/anthonybennett/cs135projects/project2/wanderer/build /nfs/home/anthonybennett/cs135projects/project2/wanderer/build /nfs/home/anthonybennett/cs135projects/project2/wanderer/build/CMakeFiles/wanderer_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/anthonybennett/cs135projects/project2/wanderer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anthonybennett/cs135projects/project2/wanderer /home/anthonybennett/cs135projects/project2/wanderer /home/anthonybennett/cs135projects/project2/wanderer/build /home/anthonybennett/cs135projects/project2/wanderer/build /home/anthonybennett/cs135projects/project2/wanderer/build/CMakeFiles/wanderer_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/wanderer_node.dir/depend
 

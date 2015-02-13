@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/nfs/home/anthonybennett/cs135projects/project2/wanderer/wanderer.cpp" "/nfs/home/anthonybennett/cs135projects/project2/wanderer/build/CMakeFiles/wanderer_node.dir/wanderer.cpp.o"
+  "/home/anthonybennett/cs135projects/project2/wanderer/wanderer.cpp" "/home/anthonybennett/cs135projects/project2/wanderer/build/CMakeFiles/wanderer_node.dir/wanderer.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "follower"
-PROJECT_SPACE_DIR = "/nfs/home/anthonybennett/cs135projects/project2/follower/build/devel"
+PROJECT_SPACE_DIR = "/home/anthonybennett/cs135projects/project2/follower/build/devel"
 PROJECT_VERSION = "0.0.0"
