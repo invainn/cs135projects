@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "follower")
-set(follower_MAINTAINER "Dave Feil-Seifer <dave@cse.unr.edu>")
-set(follower_DEPRECATED "")
-set(follower_VERSION "0.0.0")
-set(follower_BUILD_DEPENDS "roscpp" "sensor_msgs" "stage_ros")
-set(follower_RUN_DEPENDS "roscpp" "sensor_msgs" "stage_ros")
-set(follower_BUILDTOOL_DEPENDS "catkin")

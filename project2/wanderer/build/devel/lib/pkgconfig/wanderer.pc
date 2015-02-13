@@ -1,8 +1,0 @@
-prefix=/home/anthonybennett/cs135projects/project2/wanderer/build/devel
-
-Name: wanderer
-Description: Description of wanderer
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/anthonybennett/cs135projects/project2/wanderer/build/devel/lib 
-Requires: 
