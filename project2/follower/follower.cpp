@@ -74,24 +74,33 @@ int main( int argc, char* argv[] )
 
 
 			//place your code here /***************************************/
-		//if blue closes in on red within 2.0, then slow down
-		double temp = bearing(blue_x, blue_y, red_x, red_y) - blue_theta;
 		
-		if(distanceFormula(blue_x, blue_y, red_x, red_y) < 2.5) {
+		// Subtract blue's theta from the bearing to get the angle that it needs to turn by
+		double temp = (bearing(blue_x, blue_y, red_x, red_y) - blue_theta);
+
+		// Variable to easily define 2PI
+		double threeSixtyNoScope = (2*M_PI);
+
+		// If temp is bigger or smaller than PI, then subtract or add 2PI, respectively
+		if(temp >= M_PI) {
+			temp = temp - threeSixtyNoScope;	
+		} else if(temp <= -M_PI) {
+			temp = temp + threeSixtyNoScope;
+		}
+
+		// If blue robot closes in within 2.0 of red robot, then slow down
+		if(distanceFormula(blue_x, blue_y, red_x, red_y) < 2.0) {
 			lvel = 0.5;
 		} else {
 			lvel = des_vel;
 		}
 			
-		// if temp  
-		if(temp > 0) {
+		// if temp is greater than zero, but less than PI, rotate right by 0.75
+		// similarly, if temp is less than zero, but greater than -PI, then rotate by -0.75 
+		if(temp > 0 && temp < M_PI) {
 			rvel = 0.75;
-		} else if(temp < 0) {
+		} else if(temp < 0 && temp > -M_PI){
 			rvel = -0.75;
-		}
-
-		if(temp == 0) {
-			rvel = 0;
 		}
 
 
