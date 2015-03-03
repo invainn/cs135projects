@@ -4,6 +4,7 @@
 void printArray(int *array, int n);
 void readArray(int *array, int n);
 void bubbleSort(int *array, int n);
+void selectionSort(int *array, int n);
 void swap(int &food, int &bars);
 
 int main(int argc, char* argv[]) {
@@ -15,7 +16,8 @@ int main(int argc, char* argv[]) {
 
 	int input[count];
 	readArray(input, count);
-	bubbleSort(input, count);
+	//bubbleSort(input, count);
+	selectionSort(input, count);
 	printArray(input, count);	
 }
 	
@@ -44,6 +46,22 @@ void bubbleSort(int array[], int n) {
 				swap(array[i], array[i+1]);
 				hasSwapped = true;
 			}
+		}
+	}
+}
+
+void selectionSort(int array[], int n) {
+	int min = 0;
+
+	for(int i = 0; i < n-1; i++) {
+		min = i;
+		for(int x = i + 1; x < n; x++) {
+			if(array[x] < array[min]) {
+				min = x;
+			}
+		}	
+		if(min != i) {
+			swap(array[i], array[min]);
 		}
 	}
 }
