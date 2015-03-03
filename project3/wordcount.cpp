@@ -14,6 +14,7 @@ int main(int argc, char* argv[]) {
 	// int x is used to retrieve the next char from the file
 	char x;
 	char dictx;
+
 	int chars = 0;
 	int nonws = 0;
 	int lines = 0;
