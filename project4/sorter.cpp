@@ -5,6 +5,7 @@ void printArray(int *array, int n);
 void readArray(int *array, int n);
 void bubbleSort(int *array, int n);
 void selectionSort(int *array, int n);
+void quickSort(int *array, int base, int count);
 void swap(int &food, int &bars);
 
 int main(int argc, char* argv[]) {
@@ -15,8 +16,10 @@ int main(int argc, char* argv[]) {
 	}	
 
 	int input[count];
+
 	readArray(input, count);
 	//bubbleSort(input, count);
+	//quickSort(input, 0, count);
 	selectionSort(input, count);
 	printArray(input, count);	
 }
@@ -63,6 +66,33 @@ void selectionSort(int array[], int n) {
 		if(min != i) {
 			swap(array[i], array[min]);
 		}
+	}
+}
+
+void quickSort(int array[], int base, int count) {
+	int min = base;
+	int max = count;
+	int pivot = array[(min + max)/2];
+
+	while(min <= max) {
+		while(array[min] < pivot) {
+			min++;
+		}
+		while(array[max] > pivot) {
+			max--;
+		}
+		if(min <= max) {
+			swap(array[min], array[max]);
+			min++;
+			max--;
+		}
+	}
+
+	if(base < min) {
+		quickSort(array, base, max);
+	}
+	if(min < count) {
+		quickSort(array, min, count);
 	}
 }
 
