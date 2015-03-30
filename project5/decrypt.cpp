@@ -14,6 +14,7 @@ int main(int argc, char* argv[]) {
 	int countx = 0;
 	int countdx = 0;
 
+	// change to 1d array?
 	char** x = new char*[100000];
 	char** dictx = new char*[100000];
 
@@ -64,7 +65,7 @@ void rotateArray(char** a, char** b, int x1, int x2) {
 			printf("Could not find encryption key\n");
 			break;
 		}
-		for(int n = 0; n < strlen(a[i])-1; n++) {
+		for(int n = 0; n < strlen(a[i]); n++) {
 			a[i][n] = rotate(a[i][n], k);	
 		}
 		for(int m = 0; m < x2; m++) {
@@ -73,11 +74,13 @@ void rotateArray(char** a, char** b, int x1, int x2) {
 		
 		if(ptemp != NULL) {
 			printf("The key is %d\n", k);
-			printf("The decrypted text is,\n");
+			printf("The decrypted text is:\n\n");
 			for(int i = 0; i < x1; i++) {
 				printf("%s ", a[i]);
 			}
+			printf("\n");
 			break;
 		}
+		k++;
 	}
 }
