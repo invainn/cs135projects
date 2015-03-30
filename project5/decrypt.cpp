@@ -74,23 +74,24 @@ void rotateArray(char* a, char** b, int x1, int x2) {
 	strcpy(temp, a);
 
 	for(int k = -50; k < 50; k++) {
-		for(int n = 0; n < strlen(a); n++) {
-			if(a[n] != '\n' && a[n] != ' ' && a[n] != '\t') {
-				temp[n] = rotate(a[n], k);
+		for(int n = 0; n < strlen(temp); n++) {
+			if(temp[n] != '\n' && temp[n] != ' ' && temp[n] != '\t') {
+				temp[n] = rotate(temp[n], k);
 			}
 		}
 		cout << temp << endl;
 		for(int m = 0; m < x2; m++) {
 			ptemp = strstr(a, b[m]);
-			if(ptemp != 0) {
-				cout << "Key is " << k << endl;
-				cout << temp << endl;
-				return;
-			} else {
-				delete(temp);
-				temp = new char[20000];
-				strcpy(temp, a);
-			}
+		}
+		if(ptemp != NULL) {
+			printf("The key is %d\n", k);
+			printf("The decrypted text is\n\n");
+			cout << temp << endl;
+			return;
+		} else {
+			delete(temp);
+			temp = new char[20000];
+			strcpy(temp, a);
 		}
 	}
 
