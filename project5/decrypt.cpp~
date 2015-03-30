@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string.h>
+#include <cstring>
 #include <cstdio>
 
 #include "rotUtils.h"
@@ -36,15 +36,13 @@ int main(int argc, char* argv[]) {
 		return 0;
 	}	
 
-	while((test = getc(file)) != EOF) {
-		x[countx] = test;
+	while(test != EOF) {
+		test = fscanf(file, "%c", &x[countx]);
 		countx++;
 	}
-	x[countx] = '\0';
-	
-	cout << x << endl;
 
 	read(dictx, dict, countdx);
+
 	rotateArray(x, dictx, countx, countdx); 
 
 	return 0;
@@ -58,7 +56,7 @@ void read(char** a, FILE* b, int &x) {
 		i = fscanf(b, "%s", a[x]);
 		x++;
 	}
-	a[x]='\0';
+
 	rewind(b);		
 }
 
@@ -68,17 +66,20 @@ void rotateArray(char* a, char** b, int x1, int x2) {
 	char* ptemp = NULL;
 
 	for(int k = -50; k < 50; k++) {
+		cout << strlen(a) << endl;
 		for(int n = 0; n < strlen(a); n++) {
 			if(a[n] != '\n' && a[n] != ' ' && a[n] != '\t') {
 				a[n] = rotate(a[n], k);
 			}
 		}
 		for(int m = 0; m < x2; m++) {
-			ptemp = strstr(a, b[m]);
+			ptemp = strcasestr(b[m], a);
+			printf("%s", ptemp);
 			if(ptemp != NULL) {
-				cout << "Key is " << k << endl;
+				kSolution = k;
+				printf("The key is %d", kSolution);
+				printf("The decrypted text is:\n");
 				cout << a << endl;
-				return;
 			}
 		}
 	}
