@@ -41,6 +41,8 @@ int main(int argc, char* argv[]) {
 		countx++;
 	}
 	x[countx] = '\0';
+
+	rewind(file);
 	
 	cout << x << endl;
 
@@ -66,19 +68,28 @@ void rotateArray(char* a, char** b, int x1, int x2) {
 	int kSolution = 0;
 
 	char* ptemp = NULL;
+	
+	char* temp = new char[20000];
+		
+	strcpy(temp, a);
 
 	for(int k = -50; k < 50; k++) {
 		for(int n = 0; n < strlen(a); n++) {
 			if(a[n] != '\n' && a[n] != ' ' && a[n] != '\t') {
-				a[n] = rotate(a[n], k);
+				temp[n] = rotate(a[n], k);
 			}
 		}
+		cout << temp << endl;
 		for(int m = 0; m < x2; m++) {
 			ptemp = strstr(a, b[m]);
-			if(ptemp != NULL) {
+			if(ptemp != 0) {
 				cout << "Key is " << k << endl;
-				cout << a << endl;
+				cout << temp << endl;
 				return;
+			} else {
+				delete(temp);
+				temp = new char[20000];
+				strcpy(temp, a);
 			}
 		}
 	}
