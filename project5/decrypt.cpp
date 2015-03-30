@@ -44,8 +44,6 @@ int main(int argc, char* argv[]) {
 
 	rewind(file);
 	
-	cout << x << endl;
-
 	read(dictx, dict, countdx);
 	rotateArray(x, dictx, countx, countdx); 
 
@@ -79,20 +77,18 @@ void rotateArray(char* a, char** b, int x1, int x2) {
 				temp[n] = rotate(temp[n], k);
 			}
 		}
-		cout << temp << endl;
-		for(int m = 0; m < x2; m++) {
-			ptemp = strstr(a, b[m]);
+		for(int m = 0; m < x2-1; m++) {
+			ptemp = strstr(temp, b[m]);
+			if(ptemp != NULL) {
+				printf("The key is %d\n", k);
+				printf("The decrypted text is\n\n");
+				cout << temp << endl;
+				return;
+			}
 		}
-		if(ptemp != NULL) {
-			printf("The key is %d\n", k);
-			printf("The decrypted text is\n\n");
-			cout << temp << endl;
-			return;
-		} else {
-			delete(temp);
-			temp = new char[20000];
-			strcpy(temp, a);
-		}
+		delete(temp);
+		temp = new char[20000];
+		strcpy(temp, a);
 	}
 
 }
