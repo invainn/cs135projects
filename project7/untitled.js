@@ -5,8 +5,9 @@ var base = new baseImage();
 
 function baseImage() {
 
-	var img = new Image();
-	img.src = "assets/base.png";
+	this.image = new Image();
+	this.image.src = "assets/base.png";
+	this.image.addEventListener("load", drawImage);
 
 	this.x = 320;
 	this.y = 430;
@@ -32,7 +33,7 @@ function drawImage() {
 function update() {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-	ctx.drawImage(base.img, base.x, base.y);
+	ctx.drawImage(base, base.x, base.y);
 }
 
 
@@ -51,19 +52,7 @@ document.body.onkeydown = function(e) {
 		}
 	}
 	if(e.keyCode == 32) {
-		if(shot1 == 0) {
-			bubbleX1 = baseX;
-			bubbleSpeed1 = 5;
-			shot1++;
-		} else if(shot2 == 0) {
-			bubbleX2 = baseX;
-			bubbleSpeed2 = 5;
-			shot2++;
-		} else if(shot3 == 0) {
-			bubbleX3 = baseX;
-			bubbleSpeed3 = 5;
-			shot3++;
-		} 
+		
 		update();
 	}
 }
