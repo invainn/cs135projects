@@ -117,6 +117,12 @@ function speedy() {
 		this.right = this.x + this.img.width;
 		this.left = this.x;
 	}
+
+	this.skitter = function() {
+		if(Math.random() < 0.02) {
+			this.direction = -this.direction;
+		}
+	}
 }
 
 function bubbles(basey) {
@@ -176,6 +182,10 @@ function update() {
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 		base.draw();
+
+		speedy1.skitter();
+		speedy2.skitter();
+		speedy3.skitter();
 		
 		speedy1.draw(speedy1, bubble1, bubble2, bubble3, time1, score1);
 		speedy2.draw(speedy2, bubble1, bubble2, bubble3, time2, score1);
